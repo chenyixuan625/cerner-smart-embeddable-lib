@@ -4845,6 +4845,11 @@ var Application = function (_EventEmitter) {
           var observer = new _mutationObserver2.default(function (mutations) {
             return self.requestResize();
           });
+
+          console.log('self:', self);
+          console.log('observer:', observer);
+          console.log('observer.observe:', observer.observe);
+          console.log('document.body:', document.body);
           observer.observe(document.body, { attributes: true, childList: true, characterData: true, subtree: true });
 
           // Registers a listener to window.onresize
